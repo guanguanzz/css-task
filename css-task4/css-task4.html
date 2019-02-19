@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css-task4/css-task4.css"/>
+</head>
+<body>
+  
+        <header >
+            <p class="p1">注册</p>
+            <p class="p2">登录</p>
+            <p class="p3">关闭</p>
+
+        </header>
+       
+
+        <form>
+           <div>
+                <img src="../css-task4/iphone.png" alt="ss" >
+
+            <input placeholder="请输入手机号" type="text" style="border:0;outline:0;border-left: 1px solid;" maxlength="11"   onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+            
+            <!-- nput文本框内添加提示文字，填写内容时消失：用placeholder属性作为提示语 
+            style="border:0;outline:0;" 用来去除边框-->
+           </div> 
+
+           <div>
+               <img src="../css-task4/locked 2.png" alt="uu" >
+            <input placeholder="请输入密码" type="password" style="border:0;outline:0;border-left: 1px solid;">
+           </div>
+            
+           <!-- <div class="g">
+               <input type="button" value="登录"style="border:0;outline:0;background-color: rgba(95, 192, 205, 1); width: 100px; height: 20px;" class="h" >
+           </div>   不需要将button设置在input里  因为button自身就是一个标签  另外不需要设置div 可以将它的宽度直接设置为100% 加背景颜色即可-->
+           <button>登&nbsp;&nbsp;&nbsp;录</button>
+        </form>
+       
+
+        <a href="http://www.w3school.com.cn" >忘记密码</a>
+  
+</body>
+</html>

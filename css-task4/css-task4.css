@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    background-color: #EFF0F4;
+}
+
+header {
+    /* width: 360px; */
+    height: 44px;
+    background-color: rgba(95, 192, 205, 1);
+    /* position: relative; */
+}
+
+.p1 {
+    /* width:30px;
+    height:15px; */
+    float: left;
+    margin-left: 5%;
+    font: 16px / 12px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+.p2 {
+    /* width:35px;
+    height:17px; */
+    float: left;
+    position: absolute;
+    left: calc(50% - 18px);
+    width: 36px;
+    font: 18px / 8px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+
+    /* 这里设置宽度是因为使用了calc与绝对定位 来使元素水平居中  所以要减去0.18rem的宽度
+但是这里为什么不能设置高度使垂直居中呢？因为这里用的绝对定位 而这里它的父级元素没有设置绝对或相对定位 所以绝对高度就是整个网页的高度，而
+网页的高度是无穷大的 所以不可以使用top:calc(50% - height/2)来使垂直居中 除非在它的父级元素header 中设置相对定位   注意：使用该方法时一定要将margin设置为0；否则不会居中 */
+}
+
+.p3 {
+    /* width:31px;
+height:15px; */
+    float: right;
+    margin-right: 5%;
+    font: 16px / 12px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+div {
+    position: relative;
+    height: 50px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 1);
+}
+
+input{
+    position: absolute;
+    top: calc(50% - 8px);
+    padding-left: 20px;
+    height: 16px;
+    font: 16px / 6px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(225, 229, 231, 1);
+
+}
+
+img {
+    border-radius: 2px 2px 2px 2px;
+    margin: 15px;
+    /* width: 13px; 
+    height: 20px; */
+    /* 为什么这里不需要高度 因为父级元素div已经设置了高度=50px 并且这里也设置了margin=15px  所以内容的高度就是固定值20px了 */
+    background: rgba(255, 255, 255, 1);
+
+}
+
+
+
+button {
+    width: 100%;
+    border: none;
+    /* 上一行是去除按钮自带的边框 */
+    margin: 10px 0;
+    height: 44px;
+    font-size: 22px;
+    color: white;
+    background-color: rgba(95, 192, 205, 1);
+    outline: none;
+    
+}
+
+a {
+    float: right;
+    font: 16px / 6px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(95, 192, 205, 1);
+
+}
