@@ -1,0 +1,262 @@
+body,
+p,
+h1 {
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+main{
+    margin-bottom: 60px;
+    /* 为什么这里要设置高度 并且是等于footer的高度
+    因为内容的高度小于main的高度 会溢出 所以下面二行就是设置了滚动条 而设置滚动条就要设置一个下外边距来滚动 否则即使设置了滚动条也不会出现滚动 */
+    overflow-y: scroll;
+    height: 100%;
+
+}
+/* 为什么设置一个overflow-y: scroll  要设置它 本级 父级 爷级至根级（即html）的height均为100%呢？
+overflow属性：如果元素中的内容超出了给定的宽度和高度属性，overflow 属性可以确定是否显示滚动条等行为。
+
+因为本元素的100% 是指上一级的100% 那上一级的100%又是指上上一级的100%  一直到根元素
+*/
+
+header {
+
+
+    position: fixed;
+    top: 0;
+    /* 上二行是将header 使用固定定位 固定在顶部  即不会随着竖滚动条滑动 */
+    display: flex;
+    align-items: center;
+    /* 使用flex布局 使子项垂直居中 */
+    justify-content: center;
+    /* 使用flex布局  使子项水平居中 */
+    z-index: 1;
+    /* 因为使用了 固定定位导致脱标 会使main的内容覆盖header  为了显示header 因此设置z-index: 1; */
+    width: 100%;
+    height: 60px;
+    background-color: #5FC0CD;
+
+}
+
+footer {
+    position:fixed;
+    bottom: 0;
+    /* 上面二行是使用固定位 将按钮固定在页面的最下方 */
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+
+/* hr{
+    margin: 0;
+} */
+
+ul {
+   margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #E1E5E7;
+    margin: 0 10px;
+    padding-left: 10px;
+    height: 40px;
+}
+
+
+.head-img {
+
+    /* display: flex;
+    align-items: center;
+    为什么对img 设置 不会产生垂直居中的效果？ 因为img只是一张图片 只有设置它的父级元素 父级元素会让它的子项去产生效果
+} */
+    margin-left: 10px;
+}
+
+
+
+
+.return {
+    /* float: left; */
+    /* 为什么这里可以不用浮动？ 因为父元素用了flex
+    在Flex布局中，flex子元素的设置float，clear以及vertical-align属性都是没有用的。 */
+
+    position: absolute;
+    top: calc(50% - 5px);
+    /* 这里的绝对定位 是根据父级元素的固定定位（即header的左上角  因为header的左上角即页面左上角定位的  即父固子绝   实际运用的比较多的是父相子绝 */
+    width: 10px;
+    height: 10px;
+    /* 为什么这里要设置宽度与高度？  因为一个盒子如果没有内容（有内容自然会有宽度与高度） 又不给
+    盒子设置宽度与高度  那么即使给该盒子设置了边框 也不会显示出来的 */
+    left: 10px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transform: rotate(-45deg);
+    /* Transform属性应用于元素的2D或3D转换。这个属性允许你将元素旋转，缩放，移动，倾斜等 */
+}
+
+.home {
+    /* line-height: 40px;
+    line-height 属性设置两段段文本之间的距离，也就是行高，如果我们把一段文本的line-height设置为父容器的高度就可以实现文本垂直居中了
+    text-align: center;
+    水平居中     之所以不需要了  是因为在header中直接使用了flex布局*/
+    color: white;
+}
+
+.bg-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 130px;
+    padding-top: 60px;
+    background-image: url(../css-task5/38a17cec12b0df5f8a4188382ba0e279e7c6e6def0df-X2hc7H.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* 上一行是让背景图的宽度与高度都等于父级元素div的宽度与高度 */
+}
+
+.name {
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    color: rgba(255, 255, 255, 1);
+    font: 18px / 6px STHeitiSC-Light;
+    font-weight: 300;
+}
+
+.age {
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    color: rgba(255, 255, 255, 1);
+    font: 14px / 6px STHeitiSC-Light;
+    font-weight: 300;
+}
+
+.dot-img {
+    position: absolute;
+    left: 121px;
+    margin: 10px;
+
+}
+
+.site {
+    position: absolute;
+    left: 140px;
+    margin: 10px;
+    color: rgba(255, 255, 255, 1);
+    font: 12px / 6px STHeitiSC-Light;
+    font-weight: 300;
+}
+
+.css {
+    display: flex;
+    text-align: center;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #E1E5E7;
+}
+
+
+
+.skill {
+    border-width: 5px;
+    padding-left: 10px;
+    margin: 10px;
+    height: 20px;
+    border-left: 1px solid #5FC0CD;
+
+}
+
+.star {
+
+
+    margin: 0 10px;
+}
+
+.ho {
+    padding-right: 10px;
+    border-right: 1px solid #E1E5E7;
+}
+
+/* 
+.mes {
+    height: 20px;
+    /* position: relative; 
+    可以不用定位 尽量不用  因为使用绝对定位会脱离标准的文本流  导致下面的水平横线会上升*/
+/* margin: 10px; */
+
+/* }  */
+
+
+
+
+
+.limit {
+    padding: 0 10px;
+    margin: 0 10px;
+    border-left: 1px solid #E1E5E7;
+}
+
+.limitb {
+    padding: 0 10px;
+    margin: 0 10px;
+    border-left: 1px solid #E1E5E7;
+    color: #E26163;
+}
+
+.go {
+    height: auto;
+    /* 因为内容比较多 所以将高度设置为auto  这样字就不会溢出横线 */
+    margin: 0;
+}
+
+.introduce {
+    flex-shrink: 0;
+    border-right: 1px solid #E1E5E7;
+    padding: 0 10px;
+}
+
+.limits {
+    margin: 0 10px;
+}
+
+
+.leave {
+    margin: 2%;
+    width: 46%;
+    /* 此处将宽度设置为48%是将整个按钮在整个宽度的46%  46%+2%+2%=50%刚好一半*/
+    height: 40px;
+
+    border: 1px solid rgba(95, 192, 205, 1);
+    border-radius: 5px;
+    font: 17px / 6px HiraginoSansGB-W3;
+
+    font-weight: normal;
+    color: rgba(95, 192, 205, 1);
+    background-color: white;
+    
+
+}
+
+.telephone {
+    float: right;
+    /* 为什么这里要设置浮动？而第一个按钮不用设置浮动？ */
+
+    /* margin: auto; */
+
+    margin: 2%;
+    width: 46%;
+    height: 40px;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(95, 192, 205, 1);
+    border: 1px solid rgba(95, 192, 205, 1);
+    border-radius: 5px;
+}
