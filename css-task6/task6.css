@@ -1,0 +1,384 @@
+body,
+ul,
+main,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    overflow-y: scroll;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(95, 192, 205, 1);
+}
+
+.di {
+    display: flex;
+    position: fixed;
+    top: 40px;
+    /* 如果不在该处设置 z-index：1  那么下拉菜单的光标就不可以移动到下面的选项 是因为下面的选项被ul的li覆盖了   但是为什么要在Nav的父父元素设置该值呢？
+   因为Nav的父级元素已经被转换为行内元素 设置不会起作用 */
+    z-index: 1;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #E1E5E7;
+    background-color: white;
+}
+
+.san {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.si {
+    /* font:14px / 6px HiraginoSansGB-W3;  不设置行高 就不会影响垂直居中*/
+    font-size: 14px;
+    font-weight: normal;
+    color: rgba(153, 153, 153, 1);
+}
+
+.sanjiao {
+    /* 画一个倒三角形 */
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid rgba(153, 153, 153, 1);
+}
+
+.dropdown {
+    /* 之所以转换为 行内块 是因为div为块级元素 如果不转为行内块 则下拉的隐藏列表也会是块级元素 宽度就是100%
+    display: inline-block;  但是为什么又不用了呢？  因为上面使用了flex布局*/
+
+    /* flex:1让所有弹性盒模型对象的元素都有相同的长度，且忽略它们内部的内容：(前提父级元素必须设置  display: flex;) */
+    flex: 1;
+    /* 为什么这里要设置行高=父级元素的高度？ 因为这样 该父级元素的子项都会垂直居中 */
+    line-height: 30px;
+}
+
+.sans {
+    display: flex;
+    /* 该垂直居中只会让该子项的文字与图片垂直居中  但是不会让他们相对于整个盒子垂直居中 因为没有给盒子设置相应高度 */
+    align-items: center;
+    justify-content: space-around;
+    border-right: 1px solid #E1E5E7;
+    border-left: 1px solid #E1E5E7;
+}
+
+.food {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgba(153, 153, 153, 1);
+}
+
+/* 因为画了个三角形 所以不用伪元素的方法引入三角形  因为用该方法 不知道如何使三角形与后面的文字垂直居中 
+.food::after {
+    float: right;
+    height: 10px;
+    width: 10px;
+    margin: 10px;
+    content: "";
+
+    background: url(../css-task6/css.png) no-repeat -10px -93px;
+} */
+
+/* .dropdowns{
+    flex: 1;
+    /* position: relative; */
+/* text-align: center;
+    line-height: 30px;
+    border-left: 1px solid #E1E5E7; */
+/* border-right: 1px solid #E1E5E7; */
+
+
+/* 下拉内容 (默认隐藏) */
+.dropdown-content {
+    display: none;
+    font-weight: normal;
+    color: rgba(153, 153, 153, 1);
+    background-color: white;
+}
+
+/* .dropdown:hover .dropdown-content 命名解析：.dropdown定义的是在该类选择器下使用该伪类选择器:hover（即光标点到.dropdown类下的“子元素”才会使用该伪类选择器）     .dropdown-content定义该伪类选择器的内容
+    注意：伪类选择器与前面的选择器之间不可以有空格
+*/
+/* 在鼠标移上去后显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    /* 为什么这里设置了是块级元素 但是它只是占一小行 而不是一整行  因为它的父级元素 是行内块   结论：父级元素是行内块，子元素无论是什么元素 它的大小都不会大于父级元素 */
+    display: block;
+}
+
+.site:hover {
+    background: rgba(95, 192, 205, 1);
+}
+
+.ul-2 {
+    width: 100%;
+    height: 450px;
+    /* 设置了上外边距 就可以不用绝对定位了（效果是一样的） 可以不用绝对定位就不要用 因为绝对定位会脱标 */
+    margin-top: 70px;
+    /* position: absolute;
+    top: 70px; */
+    list-style-type: none;
+    /* 为了可以滚动 并且展示全部内容  所以加一个下外边框并且=footer的高度+5条下边框的高度  即60+5 */
+    margin-bottom: 65px;
+}
+
+.xixi {
+    display: flex;
+    /* 使子项的三个p标签 按列分布 */
+    flex-direction: column;
+    /* 使子项的三个p标签 水平居中（但是这里是按列分布 所以相当于 垂直居中 即达到三个p标签最上与最下的p标签上下的空距是一样的 有点说不明白 看效果图） */
+    justify-content: center;
+    /* position: relative;  使用position定位 实现不了小图标与后面的文字垂直居中*/
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid #E1E5E7;
+}
+
+.navigation-1 {
+    display: flex;
+    /* 使用下一行 就可以使小图标与后面的文字 垂直居中 */
+    align-items: center;
+    color: rgba(93, 93, 93, 1);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tu1 {
+    width: 15px;
+    height: 15px;
+    background: url(../css-task6/css.png) no-repeat -94px -10px;
+}
+
+/* 为什么不使用伪元素加载图片？ 因为使用该方法 实现不了图片与后面的文字垂直居中  而使用flex布局可以
+ .navigation-1::before {
+    为什么要加浮动(或者下面二行) 图标才能显示？  因为content内容为空  所以content没有空间  而我们加载的只是背景  当内容为空 
+    背景是显示不出来的  当然这里是用伪类才会显示不出来 在其他地方当给加载背景的元素设置了高度与宽度 背景就会显示出来
+   
+    float: left;
+    
+    content: "";
+    margin: 7.5px;
+    width: 15px;
+    height: 15px;
+    background: url(../css-task6/css.png) no-repeat -94px -10px;
+}  */
+
+
+.navigation-2 {
+    /* 这里为什么要加 不换行？ 因为这里有二块分开的文字 如果不加 则后一块的文字会换行 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; 该方法实现不了垂直居中  使用行高等于父级元素高度可以实现垂直居中 */
+    line-height: 30px;
+}
+
+.dates {
+    margin-left: 30px;
+    /* text-overflow有两个属性值，clip和ellipsis。clip 表示不显示省略标记（…），
+    而是简单的裁切；ellipsis代表当对象内文本溢出时显示省略标记（…） */
+    text-overflow: ellipsis;
+    /* overflow 属性规定当内容溢出元素框时发生的事情。 hidden：内容会被修剪，并且其余内容是不可见的。 */
+    overflow: hidden;
+    /* 不换行，强制文本在一行显示。 */
+    white-space: nowrap;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+
+
+}
+
+.time {
+    /* 为什么要设置右外边距呢？ 因为在该元素的后面还有一个返回符号  而父级元素已经使用flex布局并且加了 justify-content: space-between;
+    所以子元素会分别贴边排（因为子项只有二个元素） 这样就没有放返回符号的位置了  所以加了一个右外边距就是为了给它子元素的符号腾位置  
+    那你可能会问为什么不把符号元素提出来 让它直接成为flex的子项（这里是孙项），这样的话flex的子项就有三项 
+     按justify-content: space-between; 排的话  就是 左右二元素贴边排 多余的空白间距只在元素中间区域分配 （不是我们想要的效果）
+     当然还有一种方方法：使用伪元素::after加载返回符号*/
+    margin-right: 15px;
+    position: relative;
+    font: 15px / 30px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(230, 59, 14, 1);
+
+}
+
+.dian {
+    /* 实际上 这里同样可以使用flex布局 在外面加一个div即可 因为上面好多都是用flex布局的 而且这里用定位效果一样 所以我没有用flex */
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    border-right: 1px solid #5FC0CD;
+    border-top: 1px solid #5FC0CD;
+    /* float: right;  在flex布局下无效 */
+    height: 10px;
+    width: 10px;
+    transform: rotate(45deg);
+}
+
+.navigation-3 {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    color: rgba(153, 153, 153, 1);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.tu3 {
+    width: 15px;
+    height: 15px;
+    background: url(../css-task6/css.png) no-repeat -94px -42px;
+}
+
+/* .navigation-3::before {
+    
+    float: left;
+
+
+
+    content: "";
+    margin: 7.5px;
+    width: 15px;
+    height: 15px;
+    background: url(../css-task6/css.png) no-repeat -94px -42px;
+} */
+
+/* .si::after {
+    float: right;
+    height: 10px;
+    width: 10px;
+    margin: 10px;
+    content: "";
+
+    background: url(../css-task6/css.png) no-repeat -10px -93px;
+} */
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    border: 0;
+    background-color: white;
+    /* outline （轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。none	默认。定义无轮廓 但是按钮是自带轮廓的 */
+    outline: none;
+}
+
+.employer {
+    height: 30px;
+    /* 会产生一个覆盖的效果 */
+    margin-right: -5px;
+    font: 17px / 30px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(85, 168, 179, 1);
+    border-radius: 5px;
+}
+
+.nurse {
+    height: 30px;
+    margin-right: -5px;
+    font: 17px / 30px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(95, 192, 205, 1);
+    background: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+}
+
+.tubiao {
+    position: fixed;
+    right: 0;
+    /*为什么top为9px 时会垂直居中? 因为header高度为40px 而该图片高度为22px  所以垂直居中=（50%*40 - 50%*22）=9 */
+    top: 9px;
+    margin-right: 20px;
+    width: 21px;
+    height: 22px;
+    border: 0;
+    background: url(../css-task6/css.png) no-repeat -10px -10px;
+}
+
+
+
+
+
+.but {
+
+    display: flex;
+    /* flex-direction用来控制子项整体布局方向，是从左往右还是从右往左，是从上往下还是从下往上。 column
+显示为列。 不加这行 会默认为从左到右排列（即背景图片在左  文字在右） */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first {
+    height: 20px;
+    width: 23px;
+    font: 13px / 6px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(153, 153, 153, 1);
+    /* 改变下面px的大小  可以移动背景图片的位置  对应x轴与y轴 */
+    background: url(../css-task6/css.png) no-repeat -51px -10px;
+}
+
+.yemain {
+    font: 10px / 25px STHeitiSC-Light;
+    font-family: STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(95, 192, 205, 1);
+}
+.mi {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(95, 192, 205, 1);
+    border-radius: 25px;
+    margin: 5px;
+    /* position: relative;  为什么这里不需要相对定位 因为这里有的圆margin 如果背景图片以它来水平垂直居中的话 会以内容的左上角（即减去margin）不会达到效果 
+    所以背景图片是直接以button的左上角 定位的 */
+}
+
+.beijin {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    height: 20px;
+    width: 20px;
+    background: url(../css-task6/css.png) no-repeat -51px -52px;
+}
+
+.you {
+    width: 21px;
+    height: 21px;
+    color: #999999;
+    background: url(../css-task6/css.png) no-repeat -10px -52px;
+}
+
+.my {
+    font: 10px / 25px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(153, 153, 153, 1);
+}
