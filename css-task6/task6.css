@@ -106,6 +106,7 @@ header {
     font-weight: normal;
     color: rgba(153, 153, 153, 1);
     background-color: white;
+    list-style-type: none;
 }
 
 /* .dropdown:hover .dropdown-content 命名解析：.dropdown定义的是在该类选择器下使用该伪类选择器:hover（即光标点到.dropdown类下的“子元素”才会使用该伪类选择器）     .dropdown-content定义该伪类选择器的内容
