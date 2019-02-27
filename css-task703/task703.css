@@ -1,0 +1,181 @@
+body,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+main{
+    
+    margin-bottom: 60px;
+}
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    background-color: #29BDE0;
+    border-bottom: 1px solid white;
+    z-index: 1;
+}
+
+.home {
+    width: 26px;
+    height: 21px;
+    margin-left: 10px;
+    background: url(../css-task703/css703.png) no-repeat -73px -133px;
+}
+
+.game {
+    font: 17px / 2px HiraginoSansGB-W3;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 1);
+}
+
+.plaint {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url(../css-task703/css703.png) no-repeat -119px -133px;
+
+}
+
+.centre {
+    width: 100%;
+    height: 330px;
+    margin-top: 40px;
+    background-color: #29BDE0;
+}
+
+.logo {
+    height: 150px;
+    width: 100%;
+    position: relative;
+}
+
+.logo-1 {
+    position: absolute;
+    left: calc(50% - 88px);
+    margin-top: 20px;
+    width: 176px;
+    height: 103px;
+    background: url(../css-task703/css703.png) no-repeat -10px -10px;
+}
+
+.logo-2 {
+    position: absolute;
+    left: calc(50% - 21px);
+    margin-top: 20px;
+    width: 42px;
+    height: 42px;
+    background: url(../css-task703/css703.png) no-repeat -10px -133px;
+}
+
+.wodi {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: 100px;
+    width: 100px;
+    font: 24px / 1px HiraginoSansGB-W6;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 1);
+}
+
+.introduce {
+    height: 50px;
+
+    width: 80%;
+    /* 下面这行的作用 是水平居中 但是前提是一定要设置宽度 */
+    margin: 0 auto 15px;
+    font: 17px / 21px HiraginoSansGB-W6;
+    font-weight: normal;
+    color: rgba(255, 200, 101, 1);
+
+}
+
+.firsts {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.wenzi {
+
+    height: 20px;
+    font: 13px /17px HiraginoSansGB-W3;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 70px;
+    margin: 0 auto;
+    /* border-bottom: 1px solid red; */
+}
+
+.date {
+    margin: 5px 0;
+    float: left;
+}
+
+.time {
+    float: right;
+    margin: 5px;
+    font: 10px / 22px HiraginoSansGB-W3;
+    font-weight: normal;
+    color: rgba(199, 199, 199, 1);
+}
+
+.skii {
+    height: 15px;
+    font: 13px/ 9px HiraginoSansGB-W3;
+    font-weight: normal;
+    color: rgba(166, 166, 166, 1);
+}
+
+.xain {
+    border-bottom: 1px solid #535353;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background: rgba(41, 189, 224, 0.5);
+
+}
+
+button {
+    width: 42%;
+    height: 40px;
+    margin: 0 2%;
+    border: 0;
+    font: 20px /2px STHeitiSC-Light;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    border-radius: 5px;
+}
+
+.recur {
+
+    background-color: red;
+
+}
+
+.share {
+
+    background-color: gold;
+
+
+}
