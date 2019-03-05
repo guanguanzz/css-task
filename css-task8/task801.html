@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css-task8/task801.css">
+</head>
+
+<body>
+    <header>
+        <!-- 最上方的一行 -->
+
+        <p class="roa">
+
+            <span class="phoer">客服热线：123456789</span>
+
+            <!-- 最上方右上角 三个图标 -->
+            <span class="one">
+                <span class="bgi-1"></span>
+                <span class="bgi-2"></span>
+                <span class="bgi-3"></span>
+            </span>
+        </p>
+        <!-- 第二行右边 -->
+        <!-- navbar 类来创建一个标准的导航栏 
+                    .navbar-expand-xl|lg|md|sm 类来创建响应式的导航栏 (大屏幕水平铺开，小屏幕垂直堆叠)。
+                    导航栏上的选项可以使用 <ul> 元素并添加 class="navbar-nav" 类。 然后在 <li> 元素上添加 .nav-item 类， <a> 元素上使用 .nav-link 类:
+                 -->
+
+        <!-- 为什么导航栏在窗口缩小时变成了按钮后 可以拉开  因为nav并没有给定高度  -->
+        <nav class="navbar navbar-expand-md bg-success navbar-dark" style="padding: 0;">
+            <!-- Brand -->
+            <a class="navbar-brand nav-left" href="#">
+                <span>技能树</span>
+                <span class="wangzi">www.jnshu.com</span>
+            </a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler butt" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav shouye">
+                    <li class="nav-item" style="outline: none; height: 60px;">
+                        <a class="nav-link" style="  color: white;" href="../css-task8/task801.html">首页</a>
+                    </li>
+                    <li class="nav-item" style="outline: none; height: 60px;">
+                        <a class="nav-link" style="  color: white;" href="../css-task8/task802/task802.html">职业</a>
+                    </li>
+                    <li class="nav-item" style="outline: none; height: 60px;">
+                        <a class="nav-link" style="  color: white;" href="../css-task8/task803/task803.html">推荐</a>
+                    </li>
+                    <li class="nav-item" style="outline: none; height: 60px;">
+                        <a class="nav-link " style="  color: white;" href="#">关于</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 第三行 制作轮播图片 -->
+        <!-- 该data-ride="carousel"属性用于将轮播标记为从页面加载开始的动画  .carousel创建一个轮播 -->
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- 圆点指示符 -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- 轮播图片 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../css-task8/qqqqqqq.png" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="../css-task8/lunbooo.png" style="width:100%">
+                </div>
+                <div class="carousel-item">
+                    <img src="../css-task8/bobobo.png" style="width:100%">
+                </div>
+            </div>
+
+            <!-- 左右切换按钮 -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- 内容第一块 -->
+        <div class="container">
+            <div class="row min">
+                <div class="col-12  col-sm-6 col-md-3 gaoxiao">
+                    <span class="bgi-4"></span>
+                    <span>高效</span>
+                    <span class="fonts">将五到七年的成长时间，缩短 到一年到三年。</span>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 gaoxiao">
+                    <span class="bgi-5"></span>
+                    <span>规范</span>
+                    <span class="fonts">标准的实战教程，不会走弯路</span>
+
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 gaoxiao">
+                    <span class="bgi-6"></span>
+                    <span>人脉</span>
+                    <span class="fonts">同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路。</span>
+
+                </div>
+
+                <div class="col-12 col-sm-6  col-md-3  gaoxia">
+                    <div class="gaoxi">
+                        <span class="bgi-7"></span>
+                        <span>12400</span>
+                    </div>
+                    <span class="fonts">累计在线学习人数</span>
+                    <div class="gaoxi">
+                        <span class="bgi-7"></span>
+                        <span>12400</span>
+                    </div>
+                    <span class="fonts">学员已经找到满意工作</span>
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- 内容的第二行 -->
+        <h6 style=" text-align: center;margin: 40px;">如何学习</h6>
+
+        <!-- 内容的第三行 -->
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-3">
+                    <div class="there">
+
+                        <span class="bg-1">1</span>
+                        <span class="fonts">匹配你现在的个人情况寻找适合自己的岗位</span>
+
+
+
+                        <span class="bgi-8"></span>
+                    </div>
+                </div>
+
+                <div class=" col-md-3">
+                    <div class="there">
+
+                        <span class="bg-1">2</span>
+                        <span class="fonts">了解职业前景薪金待遇、竞争压力等</span>
+
+
+
+                        <span class="bgi-8"></span>
+                    </div>
+                </div>
+                <div class=" col-md-3">
+                    <div class="there">
+
+                        <span class="bg-1">3</span>
+                        <span class="fonts">掌握行业内顶级技能</span>
+
+
+                        <span class="bgi-8"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="there">
+
+                        <span class="bg-1">4</span>
+                        <span class="fonts">查看职业目标任务</span>
+
+
+
+                        <span class="bgi-8"></span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- 内容的第四行 -->
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-3">
+                    <div class="there">
+                        <span class="bg-1">5</span>
+                        <span class="fonts">匹配你现在的个人情况寻找适合自己的岗位</span>
+                        <span class="bgi-8"></span>
+                    </div>
+                </div>
+
+                <div class=" col-md-3">
+                    <div class="there">
+                        <span class="bg-1">6</span>
+                        <span class="fonts">了解职业前景薪金待遇、竞争压力等</span>
+                        <span class="bgi-8"></span>
+                    </div>
+                </div>
+                <div class=" col-md-3">
+                    <div class="there">
+                        <span class="bg-1">7</span>
+                        <span class="fonts">掌握行业内顶级技能</span>
+                        <span class="bgi-8"></span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="there">
+                        <span class="bg-1">8</span>
+                        <span class="fonts">查看职业目标任务</span>
+                        <span class="bgi-8"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 内容的第五行 -->
+        <h6 style=" text-align: center;margin: 40px;">优秀学员展示</h6>
+        <!-- 内容的第六行 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <div class=" touxiang">
+                        <span class="bgi-9"></span>
+                        <span class="fonts">技术顾问：罗大佑</span>
+                        <span class="fonts">百度技术总监:互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-12">
+                    <div class=" touxiang">
+                        <span class="bgi-10"></span>
+                        <span class="fonts">技术顾问：罗大佑</span>
+                        <span class="fonts">百度技术总监:互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-12">
+                    <div class=" touxiang">
+                        <span class="bgi-11"></span>
+                        <span class="fonts">技术顾问：罗大佑</span>
+                        <span class="fonts">百度技术总监:互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-sm-12">
+                    <div class=" touxiang">
+                        <span class="bgi-12"></span>
+                        <span class="fonts">技术顾问：罗大佑</span>
+                        <span class="fonts">百度技术总监:互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 内容的第七行 -->
+        <p class="yuanyuan">
+            <span class="yuans"></span>
+            <span class="yuan"></span>
+            <span class="yuan"></span>
+            <span class="yuan"></span>
+        </p>
+        <h6 style=" text-align: center;margin: 40px;">战略合作企业</h6>
+        <!-- 内容的第八行 -->
+        <!-- 这一行是直接使用媒体查询 实现的响应式 -->
+        <div class="zhan" style="width:100%; background-color: white;">
+            <div class=" zhanyue">
+                <span class="bgi-13"></span>
+            </div>
+            <div class=" zhanyue">
+                <span class="bgi-14"></span>
+            </div>
+            <div class=" zhanyue">
+                <span class="bgi-15"></span>
+            </div>
+            <div class=" zhanyue">
+                <span class="bgi-16"></span>
+            </div>
+            <div class=" zhanyue">
+                <img src="../css-task8/company4.png">
+            </div>
+        </div>
+
+        <!-- 内容的最后一行 -->
+        <div>
+            <p style="text-align:center;margin: 40px;">友情链接</p>
+            <div class="container marg">
+
+                <ul class="row ruanjian">
+                    <!-- 对md等不只可以设置数字>13 而且可以设置百分比 反正一行为100% -->
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                </ul>
+                <ul class="row ruanjian">
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                    <li class="col-md-10% shouj"><span class="shouji">手机软件</span></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class=" row flexs">
+                <div class="fle">
+                    <span class="fon">技能树 — 改变你我 </span>
+                    <span class="fontse">关于我们 | 联系我们 | 合作企业</span>
+                </div>
+
+                <div class="fle">
+                    <span class="font">旗下网站</span>
+                    <p class="hov"><span class="fot">草船云孵化器</span>&nbsp;&nbsp;&nbsp;<span class="fot">最强IT特训营</span></p>
+                    <p class="hov"><span class="fot">葡萄藤轻游戏 </span>&nbsp;&nbsp;&nbsp;<span class="fot">桌游精灵</span></p>
+                </div>
+                <div class="fle">
+                    <p class="fot">微信公众平台</p>
+                    <span class="bgi-18"></span>
+                </div>
+            </div>
+        </div>
+        <p class="jiaodi">Copyright © 2015技能树 www.jnshu.com All Rights Reserved | 京ICP备13005880号</p>
+
+
+    </footer>
+
+    <a class="go-top" href="#top">
+        <span class="miaodian"></span>
+        <span class="sanj"></span>
+        <span class="text">返回顶部</span>
+
+    </a>
+</body>
+
+</html>
