@@ -1,0 +1,442 @@
+main,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h5 {
+    background-color: #f8f9fa !important;
+}
+
+header {
+    width: 100%;
+    /* 高度为什么不写？ 第一不固定高度是为了做成响应式 第二就算不固定高度，但是只要里面有内容就会有高度的 */
+    /* height:  ; */
+
+    background: rgba(29, 122, 217, 1);
+}
+
+input[type=checkbox],
+input[type=radio] {
+    display: none;
+}
+
+
+.tubo::before {
+
+    display: inline-block;
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  
+    vertical-align: middle;
+    margin-right: 10px;
+
+    border: 1px solid darkgray;
+
+}
+input:checked + .tubo::before{
+    background-color: white;
+    border: 8px solid darkseagreen;
+}
+
+
+
+/* header */
+/* 最上面一行   */
+.first {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.first-left {
+    margin-left: 5%;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+
+}
+
+.first-rigth {
+    display: flex;
+    margin-right: 5%;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+}
+
+@media(max-width:578px) {
+
+    .first {
+        flex-direction: column;
+    }
+
+
+    .first-rigth {
+
+        justify-content: space-around;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+.first-left:hover {
+    color: red;
+}
+
+.register:hover {
+    color: dimgray;
+    background-color: white;
+}
+
+.registers:hover {
+    color: dimgray;
+    background-color: white;
+}
+
+
+/* 导航栏 */
+/* 导航栏 */
+.nav-left {
+    display: flex;
+    flex-direction: column;
+    margin: 0 54% 0 5%;
+}
+
+.nav-link {
+    /* 下面这行为什么不是30px 而是28px因为这里是box-border盒子并且设置了border为1px 所以30-2  */
+    line-height: 28px;
+    text-align: center;
+    padding: 0;
+    width: 60px;
+}
+
+.nav-link.width-1 {
+    width: 120px;
+}
+
+.nav-link.width-2 {
+    width: 90px;
+}
+
+.nav-link:hover {
+    background-color: rgba(29, 122, 217, 1);
+    border: 1px solid rgba(29, 122, 217, 1);
+    color: white;
+}
+
+.butt {
+    margin: 15px 0 15px 80%;
+    border: 0;
+
+}
+
+.shouye {
+    /* margin-left: 50%; 用它来将文字往右撑 随着窗口的变化
+    并不能达到好的效果  所以使用flex的justify-content: flex-end;*/
+    align-items: center;
+
+
+}
+
+@media(max-width:768px) {
+    .shouye {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        /* 这行是为了让  导航栏打开时 ul的li的文字 排到后面 */
+        justify-content: flex-end;
+    }
+}
+
+.bg-link {
+
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: black;
+}
+
+.nav-item {
+    outline: none;
+    height: 30px;
+    margin: 15px 0;
+}
+
+.line {
+    margin: 15px 30px;
+}
+
+@media(max-width:768px) {
+    .nav-item {
+        width: 80%;
+
+    }
+
+    .nav-link {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-link.width-1 {
+        width: 100%;
+        margin: 0;
+
+    }
+
+    .nav-link.width-2 {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* 内容 */
+
+/* 进度条 */
+.bard {
+    padding: 0;
+}
+
+.strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 15px 0;
+    width: 100%;
+    height: 10px;
+    background-color: darkgray;
+}
+
+.circle {
+    position: absolute;
+    left: calc(50% - 15px);
+    top: calc(50% - 15px);
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    background-color: darkgray;
+}
+
+.customization {
+    margin: 35px 0;
+    color: darkgray;
+}
+
+@media(min-width:576px) and (max-width:768px) {
+    .there {
+        margin: 35px 0;
+    }
+}
+@media(max-width:576px){
+    .ther{
+        margin: 40px 0;
+    }
+}
+
+.strip:hover .circle {
+    background-color: gold;
+}
+
+/* 为什么点.customization的内容  父级.strip也会变 ，
+因为.customization也是父级.strip的一部分 */
+.strip:hover .customization {
+    background-color: darkgray;
+    color: gold;
+}
+
+.strip:hover {
+    background-color: gold;
+}
+
+
+/* 表单 */
+
+/* 第一个表单 */
+.sbox {
+    display: flex;
+    height: 50px;
+    margin-bottom: 0;
+    border: 1px solid darkgray;
+    line-height: 50px;
+    /* font:22px/6px MicrosoftYaHei; h5自带字体属性并且 */
+    font-weight: 400;
+    color: rgba(29, 122, 217, 1);
+
+}
+
+.befo-1::before {
+    /* 为什么上下margin设置为17.5px ? 因为要让该图片垂直居中 
+    又已知图片与h5的高度 所以可以通过调margin就能让他垂直居中了  50=17.5*2+15*/
+    margin: 17.5px 10px;
+    content: "";
+
+    width: 19px;
+    height: 15px;
+    background: url(../css-task10/css10.png) no-repeat -45px -76px;
+
+}
+
+.seew {
+    position: absolute;
+    top: calc(50% - 20px);
+    right: 30px;
+ 
+    width: 120px;
+}
+
+.form-one {
+    height: 100px;
+    position: relative;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    margin: 0;
+}
+
+@media(max-width:768px) {
+    .form-one {
+        height: 300px;
+    }
+}
+
+.row {
+    margin: 0;
+}
+
+/* 第二个表单 */
+.befo-2::before {
+    width: 22px;
+    height: 20px;
+    margin: 15px 10px;
+    content: "";
+    background: url(../css-task10/css10.png) no-repeat -76px -10px;
+}
+
+.input-w {
+    width: 90px;
+}
+
+.form-two {
+    position: relative;
+    height: 200px;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+}
+
+.roor {
+    height: 100px;
+}
+
+@media(max-width:992px) {
+    .form-two {
+        height: 400px;
+    }
+
+    .roor {
+        height: 200px;
+    }
+
+    .seew {
+        top: 20px;
+    }
+
+}
+
+/* 第三个表单 */
+.befo-3::before {
+    content: "";
+    width: 15px;
+    height: 20px;
+    background: url(../css-task10/css10.png) no-repeat -10px -76px;
+    margin: 15px 10px;
+
+}
+
+.form-there {
+    position: relative;
+    height: 100px;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+}
+
+@media(min-width:576px) and (max-width:992px) {
+    .form-there {
+        height: 300px;
+    }
+}
+
+@media(max-width:576px) {
+    .form-there {
+        height: 600px;
+    }
+}
+
+/* 按钮 */
+.book {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid darkgray;
+
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: brown;
+    color: aliceblue;
+    outline: none;
+}
+
+/* 公司信息 */
+.fle {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bgi-4 {
+    margin: 20px 0;
+    width: 46px;
+    height: 46px;
+}
+
+.fon {
+
+    font-size: 12px;
+    font-family: MicrosoftYaHei;
+    font-weight: bold;
+    color: rgba(153, 153, 153, 1);
+    line-height: 6px;
+}
+
+@media(max-width:992px) {
+    .calio {}
+}
+
+/* 页脚 */
+footer {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: aliceblue;
+    background-color: rgba(29, 122, 217, 1);
+    text-align: center;
+}
+
+.fon:hover {
+    color: rgba(29, 122, 217, 1);
+}
