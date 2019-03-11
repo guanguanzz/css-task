@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登入</title>
+    <link rel="stylesheet" type="text/css" href="../css-task11/task11.css">
+</head>
+
+<body>
+    <header>
+        <span class="header-left">注册</span>
+        <span>登入</span>
+        <span class="header-right">关闭</span>
+    </header>
+
+    <main>
+        <form>
+            <div>
+                <img src="../css-task11/iphone.png">
+                <input type="text" placeholder="请输入手机号" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^19]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                    onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-19]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+                    maxlength="11">
+            </div>
+            <div>
+                <img src="../css-task11/locked 2.png">
+                <input type="text" placeholder="请输入密码">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        登入
+    </footer>
+    <a href="www.baidu.com" >忘记密码</a> 
+
+</body>
+
+</html>
