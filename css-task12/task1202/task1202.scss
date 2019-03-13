@@ -1,0 +1,291 @@
+// 常量
+$border:1px solid #5fc0cd;
+$borders:1px solid darkgray;
+// 混合器
+
+// 占位符
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%position {
+    position: relative;
+    flex: 1;
+    border-right: $borders;
+    height: .5rem;
+}
+
+%triangle {
+    margin-left: .2rem;
+    width: .07rem;
+    height: .04rem;
+    background: url(../task1202/css1202.png) no-repeat -.1rem -.93rem;
+}
+
+%ul {
+    position: absolute;
+    top: .5rem;
+    display: none;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+%li {
+    height: .3rem;
+    line-height: .3rem;
+    background-color: white;
+}
+
+
+html {
+    font-size: 625%;
+}
+
+body {
+    margin: 0;
+    font-size: initial;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*头部*/
+header {
+    @extend %flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: .6rem;
+    background-color: #5fc0cd;
+    z-index: 3;
+
+    button {
+        width: .8rem;
+        height: .5rem;
+        border: 0;
+        border-radius: .1rem;
+        font-size: .19rem;
+        outline: none;
+
+    }
+
+    .but-one {
+        margin-right: -.1rem;
+        color: #5fc0cd;
+        background-color: white;
+    }
+
+    .but-two {
+        color: white;
+        background-color: darkcyan;
+    }
+
+    span {
+        position: absolute;
+        right: .5rem;
+        width: .22rem;
+        height: .22rem;
+        background: url(../task1202/css1202.png) no-repeat -.1rem -.1rem;
+    }
+}
+
+/*内容*/
+main {
+    margin: .6rem 0;
+li{
+    list-style-type: none;
+}
+    .row-one {
+        border-bottom: $borders;
+        @extend %flex;
+
+        .hov-one {
+            @extend %position;
+            @extend %flex;
+
+            div {
+                @extend %flex;
+
+                .triangle {
+                    @extend %triangle;
+                }
+            }
+
+            ul {
+                @extend %ul;
+            }
+
+            li {
+                @extend %li;
+            }
+
+            &:hover ul {
+                display: block;
+            }
+
+            li:hover {
+                background-color: #5fc0cd;
+            }
+
+        }
+
+        .hov-two {
+            @extend %flex;
+            @extend %position;
+
+            div {
+                @extend %flex;
+
+                .triangle {
+                    @extend %triangle;
+                }
+            }
+
+            ul {
+                @extend %ul;
+            }
+
+            li {
+                @extend %li;
+            }
+
+            &:hover ul {
+                display: block;
+            }
+
+            li:hover {
+                background-color: #5fc0cd;
+            }
+        }
+
+        .hov-there {
+            @extend %flex;
+            @extend %position;
+
+            div {
+                @extend %flex;
+
+                .triangle {
+                    @extend %triangle;
+                }
+            }
+
+            ul {
+                @extend %ul;
+            }
+
+            li {
+                @extend %li;
+            }
+
+            &:hover ul {
+                display: block;
+            }
+
+            li:hover {
+                background-color: #5fc0cd;
+            }
+        }
+
+    }
+
+    .bord li {
+        border-bottom: $borders;
+    }
+
+    ul li div {
+        display: flex;
+        align-items: center;
+    }
+
+    li>div {
+        height: .3rem;
+    }
+
+    .san {
+        margin-right: .1rem;
+        width: .1rem;
+        height: .1rem;
+        border-bottom: $border;
+        border-left: $border;
+        transform: rotate(-135deg);
+    }
+.dib{
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.dic{
+    margin-left: .2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+    .bgi-1 {
+        margin: .05rem;
+        width: .12rem;
+        height: .12rem;
+        background: url(../task1202/css1202.png)no-repeat -.94rem -.10rem;
+    }
+
+    .bgi-2 {
+        margin: .05rem;
+        width: .1rem;
+        height: .12rem;
+        background: url(../task1202/css1202.png)no-repeat -.94rem -.42rem;
+    }
+
+}
+
+/*页脚*/
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: .6rem;
+    background-color: white;
+    z-index: 2;
+
+    div {
+        flex-direction: column;
+        @extend %flex;
+    }
+
+    .bgi-3 {
+        width: .23rem;
+        height: .20rem;
+        background: url(../task1202/fgsefse.png) no-repeat -.1rem -.1rem;
+    }
+
+    .bgi-4 {
+        position: absolute;
+        top:calc(50% - .1rem);
+        left: calc(50% - .1rem);
+        width: .2rem;
+        height: .2rem;
+        background: url(../task1202/fgsefse.png)no-repeat -.53rem -.10rem;
+    }
+    .yuan{
+        position: relative;
+        width: .5rem;
+        height: .5rem;
+        border-radius: .25rem;
+        background-color: #5fc0cd;
+    }
+
+    .bgi-5 {
+        width: .21rem;
+        height: .21rem;
+        background: url(../task1202/fgsefse.png) no-repeat -.10rem -.50rem;
+    }
+
+}

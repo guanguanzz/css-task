@@ -1,0 +1,89 @@
+ul p .stea::before, ul p .steas::before {
+  content: "";
+  margin: .1rem;
+  width: .13rem;
+  height: .13rem;
+  background: url(../task1201/dasda.png) no-repeat;
+}
+
+ul p .stea, ul .year {
+  border-right: 0.01rem solid darkgray;
+  padding-right: .1rem;
+}
+
+/*ul*/
+ul {
+  list-style: none;
+  font-size: .2rem;
+}
+
+ul .border {
+  border-bottom: 0.01rem solid darkgray;
+}
+
+ul .border span {
+  border-left: .01rem solid darkcyan;
+  margin-left: .1rem;
+  padding-left: .1rem;
+  line-height: .5rem;
+}
+
+ul li {
+  height: .5rem;
+}
+
+ul span {
+  width: 100px;
+}
+
+ul p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: .5rem;
+  margin: 0 .1rem;
+  border-bottom: 0.01rem solid darkgray;
+}
+
+ul p .stea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ul p .steas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ul strong {
+  padding: .1rem;
+}
+
+ul .myme {
+  border-bottom: 0.01rem solid darkgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+}
+
+ul .myme span {
+  padding-left: .1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+/*# sourceMappingURL=ul.css.map */

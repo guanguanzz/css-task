@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* 设置单位*/
+html {
+  font-size: 625%;
+}
+
+body {
+  font-size: initial;
+}
+
+main, body, p, ul {
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=reset.css.map */

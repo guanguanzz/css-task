@@ -1,0 +1,244 @@
+@charset "UTF-8";
+header, main .row-one, main .row-one .hov-one, main .row-one .hov-one div, main .row-one .hov-two, main .row-one .hov-two div, main .row-one .hov-there, main .row-one .hov-there div, footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .row-one .hov-one, main .row-one .hov-two, main .row-one .hov-there {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-right: 1px solid darkgray;
+  height: .5rem;
+}
+
+main .row-one .hov-one div .triangle, main .row-one .hov-two div .triangle, main .row-one .hov-there div .triangle {
+  margin-left: .2rem;
+  width: .07rem;
+  height: .04rem;
+  background: url(../task1202/css1202.png) no-repeat -0.1rem -0.93rem;
+}
+
+main .row-one .hov-one ul, main .row-one .hov-two ul, main .row-one .hov-there ul {
+  position: absolute;
+  top: .5rem;
+  display: none;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+main .row-one .hov-one li, main .row-one .hov-two li, main .row-one .hov-there li {
+  height: .3rem;
+  line-height: .3rem;
+  background-color: white;
+}
+
+html {
+  font-size: 625%;
+}
+
+body {
+  margin: 0;
+  font-size: initial;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*头部*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: .6rem;
+  background-color: #5fc0cd;
+  z-index: 3;
+}
+
+header button {
+  width: .8rem;
+  height: .5rem;
+  border: 0;
+  border-radius: .1rem;
+  font-size: .19rem;
+  outline: none;
+}
+
+header .but-one {
+  margin-right: -.1rem;
+  color: #5fc0cd;
+  background-color: white;
+}
+
+header .but-two {
+  color: white;
+  background-color: darkcyan;
+}
+
+header span {
+  position: absolute;
+  right: .5rem;
+  width: .22rem;
+  height: .22rem;
+  background: url(../task1202/css1202.png) no-repeat -0.1rem -0.1rem;
+}
+
+/*内容*/
+main {
+  margin: .6rem 0;
+}
+
+main li {
+  list-style-type: none;
+}
+
+main .row-one {
+  border-bottom: 1px solid darkgray;
+}
+
+main .row-one .hov-one:hover ul {
+  display: block;
+}
+
+main .row-one .hov-one li:hover {
+  background-color: #5fc0cd;
+}
+
+main .row-one .hov-two:hover ul {
+  display: block;
+}
+
+main .row-one .hov-two li:hover {
+  background-color: #5fc0cd;
+}
+
+main .row-one .hov-there:hover ul {
+  display: block;
+}
+
+main .row-one .hov-there li:hover {
+  background-color: #5fc0cd;
+}
+
+main .bord li {
+  border-bottom: 1px solid darkgray;
+}
+
+main ul li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main li > div {
+  height: .3rem;
+}
+
+main .san {
+  margin-right: .1rem;
+  width: .1rem;
+  height: .1rem;
+  border-bottom: 1px solid #5fc0cd;
+  border-left: 1px solid #5fc0cd;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+main .dib {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main .dic {
+  margin-left: .2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main .bgi-1 {
+  margin: .05rem;
+  width: .12rem;
+  height: .12rem;
+  background: url(../task1202/css1202.png) no-repeat -0.94rem -0.1rem;
+}
+
+main .bgi-2 {
+  margin: .05rem;
+  width: .1rem;
+  height: .12rem;
+  background: url(../task1202/css1202.png) no-repeat -0.94rem -0.42rem;
+}
+
+/*页脚*/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: .6rem;
+  background-color: white;
+  z-index: 2;
+}
+
+footer div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .bgi-3 {
+  width: .23rem;
+  height: .20rem;
+  background: url(../task1202/fgsefse.png) no-repeat -0.1rem -0.1rem;
+}
+
+footer .bgi-4 {
+  position: absolute;
+  top: calc(50% - .1rem);
+  left: calc(50% - .1rem);
+  width: .2rem;
+  height: .2rem;
+  background: url(../task1202/fgsefse.png) no-repeat -0.53rem -0.1rem;
+}
+
+footer .yuan {
+  position: relative;
+  width: .5rem;
+  height: .5rem;
+  border-radius: .25rem;
+  background-color: #5fc0cd;
+}
+
+footer .bgi-5 {
+  width: .21rem;
+  height: .21rem;
+  background: url(../task1202/fgsefse.png) no-repeat -0.1rem -0.5rem;
+}
+/*# sourceMappingURL=task1202.css.map */

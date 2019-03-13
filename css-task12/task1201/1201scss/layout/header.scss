@@ -1,0 +1,28 @@
+$border:.01rem solid white;
+$color:white;
+header{
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: .6rem;
+    background-color:#5fc0cd;   
+    color: $color;
+    text-align: center; 
+    span{
+        position: absolute;
+        top:calc(50% - .05rem);
+        left: .1rem;
+        width: .1rem;
+        height: .1rem;
+        border-bottom:$border;
+        border-left: $border;
+        transform: rotate(45deg);            
+    } 
+    p{
+       line-height: .6rem; 
+    }    
+}
+main{
+    margin: .6rem 0;
+}

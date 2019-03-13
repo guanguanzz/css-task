@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/* 设置单位*/
+html {
+  font-size: 625%;
+}
+
+body {
+  font-size: initial;
+}
+
+main, body, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul p .stea::before, ul p .steas::before {
+  content: "";
+  margin: .1rem;
+  width: .13rem;
+  height: .13rem;
+  background: url(../task1201/dasda.png) no-repeat;
+}
+
+ul p .stea, ul .year {
+  border-right: 0.01rem solid darkgray;
+  padding-right: .1rem;
+}
+
+/*ul*/
+ul {
+  list-style: none;
+  font-size: .2rem;
+}
+
+ul .border {
+  border-bottom: 0.01rem solid darkgray;
+}
+
+ul .border span {
+  border-left: .01rem solid darkcyan;
+  margin-left: .1rem;
+  padding-left: .1rem;
+  line-height: .5rem;
+}
+
+ul li {
+  height: .5rem;
+}
+
+ul span {
+  width: 100px;
+}
+
+ul p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: .5rem;
+  margin: 0 .1rem;
+  border-bottom: 0.01rem solid darkgray;
+}
+
+ul p .stea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ul p .steas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ul strong {
+  padding: .1rem;
+}
+
+ul .myme {
+  border-bottom: 0.01rem solid darkgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+}
+
+ul .myme span {
+  padding-left: .1rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+div span, div .dot {
+  position: absolute;
+  left: 1.3rem;
+}
+
+/*img*/
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 2.12rem;
+  color: white;
+  background: url(../../css-task12/task1201/ewewqaedad.png) no-repeat;
+}
+
+div .head {
+  position: absolute;
+  top: calc(50% - .43rem);
+  left: .1rem;
+  height: .86rem;
+}
+
+div span {
+  top: 35%;
+}
+
+div .dot {
+  top: 53%;
+}
+
+div p {
+  position: absolute;
+  left: 1.4rem;
+  top: 50%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: .6rem;
+  background-color: #5fc0cd;
+  color: white;
+  text-align: center;
+}
+
+header span {
+  position: absolute;
+  top: calc(50% - .05rem);
+  left: .1rem;
+  width: .1rem;
+  height: .1rem;
+  border-bottom: 0.01rem solid white;
+  border-left: 0.01rem solid white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header p {
+  line-height: .6rem;
+}
+
+main {
+  margin: .6rem 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: .6rem;
+  background-color: white;
+}
+
+footer button {
+  width: 46%;
+  height: .5rem;
+  margin: 0 2%;
+  border-color: #5fc0cd;
+  border-radius: .1rem;
+  outline: none;
+  text-align: center;
+  line-height: .5rem;
+  background-color: white;
+}
+
+footer .but-left {
+  color: #5fc0cd;
+}
+
+footer .but-rigth {
+  color: white;
+  float: right;
+  background-color: #5fc0cd;
+}
+/*# sourceMappingURL=1201.css.map */

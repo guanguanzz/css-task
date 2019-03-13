@@ -1,0 +1,90 @@
+// 常量
+$border:.01rem solid darkgray;
+
+// 占位符
+%bfore {
+    content: "";
+    margin: .1rem;
+    width: .13rem;
+    height: .13rem;
+    background: url(../task1201/dasda.png)no-repeat;
+}
+
+%borders {
+    border-right: $border;
+    padding-right: .1rem;
+}
+
+/*ul*/
+ul {
+    list-style: none;
+    font-size: .2rem;
+
+    .border {
+        border-bottom: $border;
+
+        span {
+            border-left: .01rem solid darkcyan;
+            margin-left: .1rem;
+            padding-left: .1rem;
+            line-height: .5rem;
+        }
+    }
+
+    li {
+        height: .5rem;
+    }
+
+    span {
+        width: 100px;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        height: .5rem;
+        margin: 0 .1rem;
+        border-bottom: $border;
+
+        .stea {
+            display: flex;
+            align-items: center;
+            @extend %borders;
+        }
+
+        .stea::before {
+            @extend %bfore;
+        }
+
+        .steas::before {
+            @extend %bfore;
+        }
+
+        .steas {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .year {
+        @extend %borders;
+    }
+
+    strong {
+        padding: .1rem;
+    }
+
+    .myme {
+        border-bottom: $border;
+        display: flex;
+        align-items: center;
+        height: auto;
+
+        span {
+            padding-left: .1rem;
+            flex-shrink: 0;
+        }
+    }
+
+
+}
