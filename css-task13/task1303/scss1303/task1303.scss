@@ -1,0 +1,177 @@
+// 常量
+$border: 1px solid white;
+$bg-color:#29BDE0;
+$color:white;
+
+// 混合器
+@mixin flex ($justify:center) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+
+}
+
+@mixin box($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin bgi ($x, $y) {
+    background: url(../img/css-task07.png)no-repeat $x $y;
+}
+
+
+
+// 重置
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $bg-color;
+}
+main{
+    margin-bottom: 40px;
+}
+header {
+    position: fixed;
+    top: 0;
+    @include box(100%, 60px);
+    background-color: $bg-color;
+    @include flex(space-between);
+    color: $color;
+    z-index: 1;
+    .header-left{
+        @include flex();
+        @include box(30px,20px );
+        margin-left: 20px;
+        border: $border;
+        .left-nei{
+            
+            @include box(15px,1px );
+            padding: 5px 0;
+            border-top: $border;
+            border-bottom: $border;
+            background:$color content-box;
+        }
+
+    }
+    .header-right{
+    @include flex();
+     @include box(30px,0px );
+     transform: rotate(45deg);
+    border-bottom: $border;
+    margin-right: 20px;
+     .right-nei{
+         @include box(30px,0px);
+         border-bottom: $border;
+         transform: rotate(-90deg);
+     }
+    }
+
+}
+.toulun{
+    @include flex(space-between);
+    @include box(94%,50px);
+    margin-top: 60px;
+    padding: 0 3%;
+    background-color: $color;
+
+    .tu-3 {
+        @include box(26px,26px );
+        @include bgi(-10px,-10px );
+        position: absolute;
+        right: 3%;
+    }
+    .yinyue{
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+}
+.daosan {
+    /* 注意 因为父级元素并没有设置相对定位 所以这里的绝对定位 的定位点就是页面的左上角  （这里我是故意没有在它父级元素mian设置相对定位） */
+    position: absolute;
+    left: 30px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid white;
+}
+.touxiang{
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    color: $color;
+   
+}
+.main-there{
+    display: flex;
+    justify-content: space-around;
+    @include box(100%,35vw );
+    .box-nei{
+        @include flex(flex-start);
+        flex-direction: column;
+        @include box(27vw,35vw );
+       
+        .nei-one{
+            @include box(25vw,18vw);
+            text-align: center;
+            line-height: 18vw;
+            font-size: 3vw;
+            border: 1vw solid white;
+            border-bottom: 0;
+            background-color: #FBB435;
+        }
+        .nei-two{
+            @include box(25vw,7vw );
+            border: 1vw solid white;
+            border-top: 0;
+            text-align: center;
+            line-height: 7vw;
+            font-size: 3vw;
+            background-color: #1A99B7;
+        }
+      
+    }
+    .box-nei:hover .bgi{
+        display: flex;
+    }
+    .bgi{
+        .bgi-one{
+         @include box(6vw,6vw );
+         margin: 1vw 0.5vw 1vw 0;
+         background: url(../img/css7.png) no-repeat 50% 8% /230%;
+        }
+        .bgi-two{
+            @include box(6vw,6vw );
+            margin: 1vw 0.5vw;
+            background: url(../img/css7.png) no-repeat 50% 36% /230%;
+        }
+        .bgi-there{
+            @include box(6vw,6vw );
+            margin: 1vw 0.5vw;
+            background: url(../img/css7.png) no-repeat 50% 64%/230%;
+        }
+        .bgi-four{
+            @include box(6vw,6vw );
+            margin: 1vw 0 1vw 0.5vw;
+            background: url(../img/css7.png) no-repeat 50% 92%/230%;
+        }
+
+    }
+}
+.end {
+    @include flex();
+    position: fixed;
+    bottom: 0;
+   @include box(100%,40px );
+    background-color:$bg-color;
+    text-decoration: none;
+
+}
+
+.tou {
+    @include box(80%,30px );
+    border: 0;
+    color:$color;
+    background-color: #FBB435;
+    outline: none;
+
+}

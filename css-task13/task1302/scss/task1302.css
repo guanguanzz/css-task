@@ -1,0 +1,205 @@
+@charset "UTF-8";
+main .di, main .nei .cai, main .nei .san {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body,
+ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+main div {
+  background-color: #FFFFFF;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #5fc0cd;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+li {
+  position: relative;
+  height: 50px;
+  border-bottom: 1px solid darkgray;
+}
+
+li > span {
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 10px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid seagreen;
+  border-left: 1px solid seagreen;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.page {
+  position: relative;
+  /*将脱标的ul剪切掉*/
+  overflow: hidden;
+}
+
+.page input {
+  display: none;
+}
+
+.page .contain-box {
+  position: relative;
+  right: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+  background-color: #f0f0f0;
+}
+
+.page .contain-box .bor {
+  margin: 15.5px;
+  padding: 10px 0;
+  width: 35px;
+  height: 3px;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  background: white content-box;
+}
+
+.page .conceal {
+  position: absolute;
+  width: 70%;
+  /*即高度为整个窗口高度*/
+  height: 100vh;
+  line-height: 50px;
+  color: seagreen;
+}
+
+/*将右侧的内容往右移70% 则右侧的内容只剩下30% 70%留给了左侧的菜单*/
+input:checked ~ .contain-box {
+  right: -70%;
+}
+
+main .di {
+  position: relative;
+  height: 60px;
+  margin: 15px;
+  border: 1px solid darkgray;
+  color: #9A9A9A;
+}
+
+main .di .biao {
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 9px;
+  height: 10px;
+  width: 10px;
+  border-bottom: 1px solid seagreen;
+  border-left: 1px solid seagreen;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+main .nei {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* 因为是按列排布  所以下面这行的作用变成了 水平居中 */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 15px;
+  height: 400px;
+  border: 1px solid darkgray;
+}
+
+main .nei .game {
+  width: 100%;
+  height: 45px;
+  margin: 0 15px;
+  border-bottom: 1px solid #FBB435;
+  text-align: center;
+  line-height: 45px;
+  color: #FBB435;
+}
+
+main .nei .ban {
+  margin-top: 15px;
+}
+
+main .nei .cai {
+  width: 100%;
+}
+
+main .nei .cai .sanj {
+  position: absolute;
+  right: 30px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #FBB435;
+}
+
+main .nei button {
+  height: 50px;
+  width: 80%;
+  border: 0;
+  background-color: #29BDE0;
+  font: 16px / 2px HiraginoSansGB-W3;
+  font-weight: normal;
+  color: white;
+  outline: none;
+}
+
+main .nei p {
+  height: 50px;
+  line-height: 50px;
+  font: 12px /50px HiraginoSansGB-W3;
+  font-weight: normal;
+  color: #787878;
+}
+
+main .nei .san {
+  height: 30px;
+  margin: 0 15px;
+}
+
+main .nei .san .dian1 {
+  width: 6px;
+  height: 6px;
+  background-color: #5fc0cd;
+  border-radius: 3px;
+  /* padding-right: 1px; */
+  margin-right: 2px;
+}
+
+main .nei .san .dain2 {
+  width: 6px;
+  height: 6px;
+  background-color: #F0F0F0;
+  border-radius: 3px;
+  margin-right: 2px;
+}
+/*# sourceMappingURL=task1302.css.map */
