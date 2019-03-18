@@ -1,0 +1,88 @@
+/*main*/
+
+/*main第一块*/
+.main-one {
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    .direction {
+        margin: 0 10px;
+        @include box(15px, 15px);
+        border-bottom: $bordert;
+        border-left: $bordert;
+        transform: rotate(-135deg);
+
+    }
+}
+
+/*main第二块左侧*/
+.main-two-left {
+    margin-bottom: 20px;
+    border: $bordert;
+    box-shadow: 0 0 2px 2px darkgray;
+
+    ul {
+        @include flex(center, column);
+        list-style-type: circle;
+
+        span {
+            padding: 20px;
+            border-bottom: 1px solid;
+            list-style-type: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        li {
+            margin: 10px 0;
+
+            &:hover {
+                color: red;
+                list-style-type: disc;
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .main-two-left {
+        width: 20%;
+        height: 100%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width:768px) {
+    .main-two-left {
+        width: 100%;
+    }
+}
+
+/*main第二块右侧*/
+.main-two-right {
+    @include flex(center, column);
+    border: $bordert;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px 2px darkgray;
+    p{
+        padding: 20px;
+        text-indent:30px;
+    }
+    .right-head {
+        @include flex(center,row); 
+    }
+}
+
+@media (min-width:768px) {
+    .main-two-right {
+        width: 70%;
+
+    }
+}
+
+@media (max-width:768px) {
+    .main-two-right {
+        width: 100%;
+    }
+}

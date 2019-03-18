@@ -1,0 +1,112 @@
+/*头部*/ 
+header {
+    // @include box(100%, 90px); 不可以给定高度
+    width: 100%;
+
+    .top {
+        @include flex(space-between, row);
+        @include box(94%, 30px);
+        margin: 0 3%;
+
+        .header-bgi {
+            @include box(107px, 24px);
+            @include bgi(-513px, -391px);
+        }
+    }
+
+    .bg {
+        // position: relative;
+        // @include flex(space-between, row);
+        // @include box(94%,60px );  不可以给定高度  不然怎么拉伸
+        position: relative;
+        width: 100%;
+        background-color: $colors;
+        color: white;
+
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            margin-left: 3%;
+            height: 60px;
+
+        }
+  
+        .bor {
+            position: fixed;
+            top: 45px;
+            right: 20px;
+            padding: 10px 0;
+            @include box(35px, 29px); 
+            margin-right: 3%;
+            border-top: $border;
+            border-bottom: $border;
+            background: white content-box;
+        }
+
+        input {
+            display: none;
+
+            &:checked~.nav-content {
+                display: block;
+                background-color: #29b078;
+
+            }
+
+
+        }
+
+        .nav-content {
+            display: none;
+            // position: absolute;
+            // top: 60px;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            list-style-type: none;
+            line-height: 57px;
+
+
+            li {
+                @include box(100%, 60px);
+                text-align: center;
+
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: white;
+                    @include box(50px, auto);
+
+                    &:hover {
+                        border-bottom: $border;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+
+}
+
+@media (min-width:768px) {
+    .bor {
+        display: none;
+    }
+
+    header .bg .nav-content {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30%;
+
+    }
+
+    header .bg input:checked~.nav-content {
+        display: flex;
+        position: absolute;
+        right: 0;
+
+    }
+}

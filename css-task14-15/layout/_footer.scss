@@ -1,0 +1,49 @@
+/*页脚*/ 
+footer{ 
+
+    color: $color;
+    background-color: $colors;
+  
+    .end{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+      span{
+          margin: 10px 0;
+        
+      }
+      .game{
+          display: flex;
+         span{
+             padding: 5px 0;
+             &:hover{
+                 text-decoration: underline;
+             }
+         }
+          
+      }
+    }
+    p{
+        border-top:$bordert;
+        text-align: center;  
+    }
+}
+/*锚点*/ 
+.to-top{
+    
+    img{
+        position: fixed;
+        bottom: 200px;
+        right: 10px;
+      
+    }
+}
+
+.to-bot{
+    img{
+        position: fixed;
+        bottom: 140px;
+        right: 10px;
+    }
+}

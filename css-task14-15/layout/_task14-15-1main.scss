@@ -1,0 +1,160 @@
+/*main*/
+main{
+    background-color: rgba(153, 153, 153, 0.05);
+} 
+/*main第一块*/ 
+.main-one {
+    @include flex(center, column);
+    margin: 20px 0;
+    .main-bgi-1 {
+        @include box(22px, 31px);
+        @include bgi(-230px, -228px);
+    }
+    .main-bgi-2{
+        @include box(30px,24px);
+        @include bgi(-640px ,-391px);
+    }
+    .main-bgi-3{
+        @include box(26px,27px);
+        @include bgi(-293px, -400px);
+    }
+    
+    p {
+        font-size: 16px; 
+        margin: 15px 0;
+    }
+
+   @extend %span;
+}
+.main-one-bor{ 
+    @include flex(center, column);
+    margin: 20px 0;
+    border-left: $bordert;
+    .main-bgi-4{
+        @include box(13px,13px);
+        @include bgi(-339px ,-400px);
+    }
+    .div-one{
+        @include flex(center,row); 
+        margin: 20px 0;
+    }
+   @extend %span;
+}
+@media (max-width:576px){
+    .main-one-bor{
+        border: 0;
+    }
+} 
+
+/*main第二块*/ 
+h3{
+    margin: 20px;
+    text-align: center;
+
+}
+.main-two{
+   
+  
+        @include flex( space-between,row);
+        .bgi-circle{
+            @include box(30px,30px);
+            margin: 10px;
+            border-radius: 50%;
+            border: $bordert;
+            text-align: center;
+            line-height: 30px;
+            color: cadetblue;
+            font-size: 16px;
+        }
+        .bgi-triangle{
+            @include box(20px,20px);
+            @include bgi(-690px, -391px); 
+        }
+
+        @extend%span;
+  
+    
+}
+
+
+/*main第三块*/
+.main-there{
+    box-shadow: 0px 0px 5px 5px #888888; 
+    margin: 20px;
+    background-color: white;
+    @include flex(center,column);
+   @extend %span;
+   img{
+       margin-top: 15px;
+   }
+   p{
+       margin: 20px 0;
+   }
+   span{
+       margin: 0 10px 40px 10px;
+   }
+} 
+p{
+    @include flex(center,row); 
+    .bgi-red{
+        background-color: red;
+    }
+    span{
+        @include box(10px,10px);
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: cadetblue;
+    }
+}
+
+/*main第四块*/
+.fles{
+    @include flex(center,row); 
+    background-color: white;
+    .main-four{
+        @include flex(center,row);
+        margin: 20px 0; 
+        height: 200px;
+
+    }
+}
+@media (min-width:1000px) { 
+    .main-four{
+        width: 20%; 
+    }  
+}
+@media(max-width:1000px){
+    .main-four{
+        width: 55%;
+    }
+}
+.main-four:hover{
+    box-shadow: 2px 2px 5px 5px #888888; 
+}
+
+
+/*main第五块*/ 
+.main-five{
+    @include flex(center,row);
+    flex-wrap: wrap; 
+    margin-bottom: 20px;
+}
+@media (max-width:576px){
+    .main-five li{
+        width: 50%;
+    }
+}
+@media (min-width:576px) and (max-width:992px){
+    .main-five li{
+        width: 20%;
+    }
+}
+@media(min-width:992px){
+    .main-five li{
+        width: 10%;
+    }
+}
+li:hover{
+    color: #29B078;
+    text-decoration: underline ;
+}

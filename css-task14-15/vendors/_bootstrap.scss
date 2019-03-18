@@ -1,0 +1,83 @@
+/*重构bootstrap*/ 
+// IE盒子
+*, ::after, ::before {
+    box-sizing: border-box;
+}  
+// 为什么下面没有写成混合器 占位符 常量等？
+// 第一 ：直接写成类选择器  那么在html中就可以直接运用该类选择器了  即类选择器也可以直接在html中写就可以引用了
+
+// 容器
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px; 
+    margin-right: auto;
+    margin-left: auto;
+} 
+// sm
+@media (min-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+}
+// md
+@media (min-width: 768px){
+    .container {
+        max-width: 720px; 
+    }
+}
+// lg
+@media (min-width: 992px){
+    .container {
+        max-width: 960px;
+    }
+}
+//xl
+@media (min-width: 1200px)
+{   .container{
+   max-width: 1140px;
+}
+} 
+
+// 行
+.row {
+    display: -ms-flexbox;
+    display: flex; 
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; 
+    margin-right: -15px; 
+    margin-left: -15px;
+} 
+
+// col
+$list:(sm:576px,md:768px,lg:992px,xl:1200px);
+@each $m,$px in $list { 
+    @media  (min-width:$px) {
+        @for $i from 1 through 12 { 
+            .col-#{$m}-#{$i}{
+                flex:0 0 100%/12*$i;
+                max-width: 100%/12*$i;
+            } 
+        }  
+    }
+}
+//下面二块是为了让 如果没有符合上述的要求的布局  那么就按下面这种布局  即宽度为100%（独占一行）
+@each $m in list {
+    @for $i from 1 through 12 {
+        .col-#{$m}-#{$i}{
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding: 0 15px;
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i}{
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding: 0 15px;
+    }  
+}

@@ -1,0 +1,9 @@
+@import "../abstracts/abstracts";
+@import "../base/reset";
+@import "../component/nav";                               
+@import "../layout/footer";  
+@import "../layout/header";
+@import "../component/slideshow";                
+@import "../layout/task14-15-1main";       
+@import "../vendors/bootstrap";   
+ // 上述加载顺序 并不好 （因为加载顺序会影响 引用  和scss编译成css的顺序 但是这里不方便该 所以看另外二个页面的）   

@@ -1,0 +1,36 @@
+/*轮播图*/ 
+.bgi-one{
+    position: relative;
+    @include flex( space-between,row); 
+    @include box(100%,300px);
+    animation: myfirst 5s;
+    
+    /*无限次播放*/ 
+    animation-iteration-count:infinite; 
+    background: url(../img/bobobo.png);
+    background-size: 100% 100%; 
+   &>span{ 
+      
+     @include box(20px,20px);
+     border-bottom: $borders;   
+     border-left: $borders;   
+     
+  }
+  p{
+    display: flex;
+    position: absolute;
+    top: 250px;
+    left: calc(50% - 30px);
+    span{
+        margin: 5px;  
+        @include box(10px,10px);
+        border-radius: 50%;
+        background-color: $color;  
+    }
+  }
+}
+
+@keyframes myfirst{
+    50%{background: url(../img/lunbooo.png);background-size: 100% 100%;} 
+    100%{background: url(../img/qqqqqqq.png);background-size: 100% 100%;} 
+}

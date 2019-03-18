@@ -1,0 +1,109 @@
+/*main*/
+
+
+/*main第一行*/
+.main-one {
+    @extend %fle;
+
+    .direction {
+        @include box(15px, 15px);
+        border-bottom: $bordert;
+        border-left: $bordert;
+        transform: rotate(45deg);
+    }
+
+    span {
+        margin-left: 10px;
+        color: $colors;
+    }
+}
+
+/*main第二行*/
+.main-two {
+    @extend %fle;
+
+    h3 {
+        margin: 0 10px;
+    }
+
+    span {
+        margin: 0 10px;
+
+        &:hover {
+            background-color: $colors;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+
+        }
+    }
+}
+
+/*main第三行*/
+.main-there {
+    @extend %fle;
+    margin-bottom: 20px;
+}
+
+/*main第四行*/
+.bgo {
+    float: left;
+    @include box(100px, 100px);
+    background: url(../img/rere1.jpg);
+}
+
+.web-th {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+        font-size: 10px;
+    }
+}
+
+td {
+    height: 50px;
+    padding: 0 10px;
+
+    img {
+        vertical-align: middle;
+    }
+
+    strong {
+        color: red;
+    }
+}
+.main-four{
+    position: relative;
+}
+.four-first{
+    display: none;
+}
+.four-hov{
+    @include flex(center,column);
+    @include box(96%,100%);
+    position: absolute;
+    top:0;
+    color: white;
+    background-color: rgba(51, 51, 51, 0.35);
+    animation: myFop 5s;
+    span{
+        margin: 20px;
+    }
+}
+@keyframes myFop {
+    0% {
+        transform-origin: center;
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+
+    100% {
+        transform-origin: center;
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+.main-four:hover .four-first{
+    display: block;
+}
